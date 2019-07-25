@@ -8,6 +8,7 @@ class LatestPostsPage extends Component {
   componentDidMount() {
     this.props.postsFetchData('https://simple-blog-api.crew.red/posts');
   }
+
   render() {
     return (
       <div>
