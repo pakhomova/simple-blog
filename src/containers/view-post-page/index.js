@@ -26,8 +26,7 @@ class ViewPostPage extends Component {
 }
 
 const mapStateToProps = state => ({
-  currentPost: state.currentPost.currentPost,
-  comment: state.comment.comment
+  currentPost: state.currentPost.currentPost
 });
 
 const mapDispatchToProps = {
