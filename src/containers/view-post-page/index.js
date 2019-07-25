@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { currentPostsFetchData } from '../../actions/current-post';
+import Post from './components/post';
+import Comment from './components/comment';
 
 class ViewPostPage extends Component {
   componentDidMount() {
@@ -10,12 +12,18 @@ class ViewPostPage extends Component {
   }
 
   render() {
-    return <div>Post ID: {this.props.match.params.id}</div>;
+    console.log(this.props.currentPost.comments);
+    return (
+      <div>
+        <Post title={this.props.currentPost.title} body={this.props.currentPost.body} />
+        <Comment comment={this.props.currentPost.comments[0]} />
+      </div>
+    );
   }
 }
 
 const mapStateToProps = state => ({
-  currentPost: JSON.stringify(state.currentPost.currentPost)
+  currentPost: state.currentPost.currentPost
 });
 
 const mapDispatchToProps = {
