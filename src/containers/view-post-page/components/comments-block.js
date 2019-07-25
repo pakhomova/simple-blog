@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
 import CommentsList from './comments-list';
 
+const commentsBlockStyle = { margin: 20 };
+
 export default class CommentsBlock extends Component {
   render() {
-    console.log(`From comments-block: ${this.props.comments}`);
-    return <CommentsList comments={this.props.comments} />;
+    return (
+      <div style={commentsBlockStyle}>
+        <h3 className="ui grey header">Comments</h3>
+        <CommentsList comments={this.props.comments} />
+      </div>
+    );
   }
 }

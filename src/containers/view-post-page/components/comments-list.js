@@ -4,10 +4,11 @@ import Comment from './comment';
 export default class CommentsList extends Component {
   render() {
     return (
-      <div className="ui fluid vertical menu">
-        {this.props.comments.map(comment => (
-          <Comment key={comment.id.toString()} {...comment} />
-        ))}
+      <div>
+        <div className="ui divider" />
+        {this.props.comments.map(comment => {
+          return <Comment key={comment.id.toString()} {...comment} />;
+        })}
       </div>
     );
   }
