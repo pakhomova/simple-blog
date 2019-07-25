@@ -21,18 +21,13 @@ class ViewPostPage extends Component {
   }
 
   render() {
-    if (this.props.isLoading) {
-      return <div>Loading</div>;
-    } else {
-      console.log(this.props.currentPost.comments);
-      return (
-        <div>
-          <Post title={this.props.currentPost.title} body={this.props.currentPost.body} />
-          <CommentsBlock comments={comments} />
-          {JSON.stringify(this.props.currentPost.comments)}
-        </div>
-      );
-    }
+    console.log(this.props.currentPost.comments);
+    return (
+      <div>
+        <Post title={this.props.currentPost.title} body={this.props.currentPost.body} />
+        {this.props.currentPost.comments && <CommentsBlock comments={this.props.currentPost.comments} />}
+      </div>
+    );
   }
 }
 
