@@ -1,3 +1,11 @@
+How to run the project:
+1. Download project folder on your computer.
+2. Open Terminal (or Command line) and go to project directory.
+3. Run ### `npm install` .
+4. Run ### `npm start` .
+5. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
